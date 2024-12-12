@@ -1,16 +1,24 @@
 import express from "express";
 import bodyParser from "body-parser";
 
-const app = express();
+const testApiApp = express();
 const port = 3310;
 
-app.use(bodyParser.text({ type: "*/*" }));
+testApiApp.use(bodyParser.text({ type: "*/*" }));
 
-app.get('/user', (req, res) => {
-    var user = JSON.parse(req.body)
-    res.send('user info is ' + JSON.stringify(user))
-  })
+testApiApp.post("/user", (req, res) => {
+  let user;
+  try {
+    user = JSON.parse(req.body);
+  } catch (error) {
+    res.status(400).send("Invalid JSON");
+    return;
+  }
+  res.send("user info is " + JSON.stringify(user));
+});
 
-app.listen(port, () => {
+testApiApp.listen(port, () => {
   console.log(`Listening at http://localhost:${port}`);
 });
+
+export default testApiApp;
