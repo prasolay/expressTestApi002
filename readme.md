@@ -7,3 +7,5 @@
 4. npm install --save-dev mocha
 5. npm install @types/mocha --save-dev
 6. npm install should --save-dev
+7. npm install morgan
+8. npm install --save @types/morgan
