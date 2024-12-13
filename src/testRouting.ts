@@ -22,6 +22,7 @@ testApiApp.post("/user", (req: Request, res: Response, next: NextFunction) => {
   let user;
   try {
     user = JSON.parse(req.body);
+    res.locals.user = user;
     return next();
   } catch (error) {
     res.status(400).send("Invalid JSON");
@@ -30,6 +31,15 @@ testApiApp.post("/user", (req: Request, res: Response, next: NextFunction) => {
 });
 
 //檢查數值是否在規定範圍內
+testApiApp.post("/user", (req: Request, res: Response, next: NextFunction) => {
+  const user = res.locals.user;
+  if (user.age > 0 && user.age < 100) {
+    res.send("user info is " + JSON.stringify(user));
+  } else {
+    res.status(400).send("Invalid age");
+    return;
+  }
+});
 // res.send("user info is " + JSON.stringify(user));
 
 testApiApp.listen(port, () => {
