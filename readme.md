@@ -9,3 +9,5 @@
 6. npm install should --save-dev
 7. npm install morgan
 8. npm install --save @types/morgan
+9. npm install chai @types/chai mocha @types/mocha  --save-dev
+10. npm install sinon @types/sinon --save-dev

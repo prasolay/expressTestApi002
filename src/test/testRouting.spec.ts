@@ -1,4 +1,4 @@
-import testApiApp from "../../src/testRouting";
+import testApiApp from "../testRouting";
 import express, { Express, Request, Response, NextFunction } from "express";
 
 describe("測試標題", function () {
