@@ -11,3 +11,5 @@
 8. npm install --save @types/morgan
 9. npm install chai @types/chai mocha @types/mocha  --save-dev
 10. npm install sinon @types/sinon --save-dev
+11. npm install pm2@latest -g
+12. npm install --save-dev parcel

@@ -12,13 +12,16 @@
     "chai": "^5.1.2",
     "express": "^4.21.2",
     "mocha": "^11.0.1",
+    "parcel": "^2.13.3",
     "should": "^13.2.3",
     "sinon": "^19.0.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2"
   },
   "scripts": {
-    "start": "ts-node src/testRouting.ts",
-    "build": "tsc"
+    "api-start": "ts-node src/testRouting.ts",
+    "build": "tsc",
+    "webBorwser-start": "parcel src/index.html",
+    "webBorwser-build": "parcel build src/index.html"
   }
 }
