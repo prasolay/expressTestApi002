@@ -1,0 +1,8 @@
+{ 
+    "/user": 
+        { "target": "http://localhost:3310/", 
+        "pathRewrite": { 
+            "^/user": "" 
+        }
+     } 
+}
