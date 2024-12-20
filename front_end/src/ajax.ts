@@ -1,6 +1,11 @@
+interface IUserData {
+  name: string;
+  age: number;
+}
+
 async function sendJsonData() {
   const url: string = "/testApi"; // 使用代理的路徑
-  const data = {
+  const data: IUserData = {
     name: "sauyu",
     age: 26,
   };
