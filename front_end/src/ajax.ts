@@ -1,27 +1,28 @@
-function sendJsonData() {
-  const xhr = new XMLHttpRequest();
-  const url = "/testApi"; // 替換為你的後端 API URL
-  // const url = "http://localhost:3510/user"; // 替換為你的後端 API URL
+async function sendJsonData() {
+  const url: string = "/testApi"; // 使用代理的路徑
   const data = {
     name: "sauyu",
     age: 26,
   };
 
-  xhr.open("POST", url, true);
-  xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+  try {
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=UTF-8",
+      },
+      body: JSON.stringify(data),
+    });
 
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === XMLHttpRequest.DONE) {
-      if (xhr.status === 200) {
-        const response = JSON.parse(xhr.responseText);
-        displayResponse(response);
-      } else {
-        console.error("Error:", xhr.statusText);
-      }
+    if (response.ok) {
+      const jsonResponse = await response.json();
+      displayResponse(jsonResponse);
+    } else {
+      console.error("Error:", response.statusText);
     }
-  };
-
-  xhr.send(JSON.stringify(data));
+  } catch (error) {
+    console.error("Error:", error);
+  }
 }
 
 function displayResponse(response: any) {

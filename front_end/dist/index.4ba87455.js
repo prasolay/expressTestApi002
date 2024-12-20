@@ -1,0 +1,2 @@
+async function t(){try{let t=await fetch("/testApi",{method:"POST",headers:{"Content-Type":"application/json;charset=UTF-8"},body:JSON.stringify({name:"sauyu",age:26})});if(t.ok){let e=await t.json();!function(t){let e=document.getElementById("response");e&&(e.textContent=JSON.stringify(t,null,2))}(e)}else console.error("Error:",t.statusText)}catch(t){console.error("Error:",t)}}window.onload=function(){t()},console.log("進入第二版系統");
+//# sourceMappingURL=index.4ba87455.js.map
