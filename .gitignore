@@ -1,7 +1,9 @@
 /back_end/node_modules
+/back_end/log
 
 /front_end/node_modules
 /front_end/.parcel-cache
+/front_end/log
 
 /log
 /.parcel-cache
