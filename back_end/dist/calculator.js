@@ -4,3 +4,4 @@ exports.addition = addition;
 function addition(a, b) {
     return a + b;
 }
+//# sourceMappingURL=calculator.js.map

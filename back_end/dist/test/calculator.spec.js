@@ -12,3 +12,4 @@ describe("Calculator Tests", () => {
         chai_1.assert.equal(result, 5);
     });
 });
+//# sourceMappingURL=calculator.spec.js.map
