@@ -34,7 +34,7 @@ testApiApp.post("/user", (req: Request, res: Response, next: NextFunction) => {
 testApiApp.post("/user", (req: Request, res: Response, next: NextFunction) => {
   const user = res.locals.user;
   if (user.age > 0 && user.age < 100) {
-    res.send("user info is " + JSON.stringify(user));
+    res.send(JSON.stringify(user));
   } else {
     res.status(400).send("Invalid age");
     return;

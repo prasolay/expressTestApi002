@@ -1,6 +1,6 @@
 function sendJsonData() {
   const xhr = new XMLHttpRequest();
-  const url = "http://localhost:3310/user"; // 替換為你的後端 API URL
+  const url = "/testApi"; // 替換為你的後端 API URL
   // const url = "http://localhost:3510/user"; // 替換為你的後端 API URL
   const data = {
     name: "sauyu",

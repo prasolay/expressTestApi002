@@ -1,8 +1,9 @@
-{ 
-    "/user": 
-        { "target": "http://localhost:3310/", 
-        "pathRewrite": { 
-            "^/user": "" 
-        }
-     } 
+{
+    "/testApi": {
+      "target": "http://localhost:3310",
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/testApi": "/user"
+      }
+    }
 }
