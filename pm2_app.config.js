@@ -1,19 +1,20 @@
 module.exports = {
   apps: [
     {
-      name: "api-start",
+      name: "back_end_start",
       script: "cmd",
-      args: "/c npm run api-start",
-      cwd: "./front_end",
+      args: "/c npm run ts-testAPI01",
+      cwd: "./back_end",
       error_file: "./log/pm2_log/pm2_err.log",
       out_file: "./log/pm2_log/pm2_out.log",
       watch: true,
       max_restarts: 3,
     },
     {
-      name: "web_browser",
+      name: "front_end_start",
       script: "cmd",
-      args: "/c npm run webBorwser-start",
+      args: "/c npm run start",
+      cwd: "./front_end",
       error_file: "./log/pm2_log/pm2_err.log",
       out_file: "./log/pm2_log/pm2_out.log",
       watch: true,
