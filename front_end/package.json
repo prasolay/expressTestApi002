@@ -11,5 +11,8 @@
     "build": "parcel build src/index.html --cache-dir C:\\Users\\sauyu\\code_tmp",
     "start": "parcel src/index.html --cache-dir C:\\Users\\sauyu\\code_tmp",
     "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@parcel/cache": "^2.13.3"
   }
 }

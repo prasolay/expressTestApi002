@@ -42,4 +42,4 @@ window.onload = function () {
   sendJsonData();
 };
 
-console.log("進入第二版系統");
+console.log("進入第4版系統");

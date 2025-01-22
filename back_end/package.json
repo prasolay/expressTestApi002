@@ -21,7 +21,8 @@
     "dev": "nodemon",
     "build": "tsc",
     "testAPI01": "cross-env NODE_ENV=production && node dist/js/testAPI01.js",
-    "ts-testAPI01": "ts-node src/testRouting.ts"
+    "ts-testAPI01": "ts-node src/testRouting.ts",
+    "mochaTest01": "mocha src/test/calculator.spec.js"
   },
   "type": "commonjs"
 }
